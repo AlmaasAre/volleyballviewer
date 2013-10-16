@@ -1,0 +1,182 @@
+/* --------------------------------
+    TABLE OF CONTENTS
+-----------------------------------
+    Imports
+    Variables
+    General
+    Responsive
+    Wrappers
+    Typography
+    Navigation
+    Header
+    Content
+    Footer
+
+----- */
+
+
+/* --------------------------------
+    Imports
+-------------------------------- */
+@import "sass-bootstrap/lib/bootstrap";
+
+
+/* --------------------------------
+    Variables
+-------------------------------- */
+$hero-height: 300px;
+
+
+/* --------------------------------
+    General    
+-------------------------------- */
+body {
+    background: #222;
+}
+
+input[type="text"], input[type="search"], input[type="password"], .btn, .navbar li, .navbar a,
+input[type="text"]:focus, input[type="search"]:focus, input[type="password"]:focus, .btn:focus, .navbar li:focus, .navbar a:focus, 
+input[type="text"]:active, input[type="search"]:active, input[type="password"]:active, .btn:active, .navbar li:active, .navbar a:active, 
+textarea textarea, select { 
+  outline: none;
+  box-shadow: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+/* --------------------------------
+    Reponsive
+-------------------------------- */
+@media (min-width: 992px) { 
+    .container {
+        // width: 900px;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .container {
+        // width: 900px;
+    }
+}
+
+
+/* --------------------------------
+    Wrappers
+-------------------------------- */
+.content-wrapper {
+    background: #f4f4f4;
+}
+
+.content {
+    padding-bottom: 30px;
+    min-height: 400px;
+}
+
+
+/* --------------------------------
+    Typography
+-------------------------------- */
+header.hero h1 {
+    position: absolute;
+    bottom: 50px;
+    color: #fff;
+}
+
+
+/* --------------------------------
+    Navigation
+-------------------------------- */
+.navbar {
+   margin-bottom: -55px;
+   background: #000;
+}
+
+@media (min-width: 992px) { 
+    .navbar {
+        border-radius: 0px;
+        background: none;
+        border: none;
+
+        li, li.active, a, li.active a {
+            background: none !important;
+        }
+    }
+}
+
+
+/* --------------------------------
+    Header
+-------------------------------- */
+header.hero {
+    background: #777 url('/images/hero-background.jpg') no-repeat center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 300px;
+    margin-bottom: 30px;
+    position: relative;
+
+    input[type="search"], .input-group-btn button {
+        margin-top: $hero-height - 17;
+        // padding-left: 35px;
+    }
+
+    .input-group-btn button {
+        padding-bottom: 7px;
+        background: #222;
+        border-color: #000;
+    }
+}
+
+
+/* --------------------------------
+    Content
+-------------------------------- */
+.element {
+    background: #ddd;
+    margin-bottom: 30px;
+    position: relative;
+
+    h3 {
+        color: #fff;
+        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        left: 0px;
+        bottom: 15px;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0px;
+        font-size: 18px;
+        line-height: 20px;
+
+        small {
+            font-size: 12px;
+            line-height: 16px;
+            display: block;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+}
+
+
+/* --------------------------------
+    Footer
+-------------------------------- */
+footer.page-footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    p {
+        color: #eee;
+    }
+}
+
+
+
+
+
