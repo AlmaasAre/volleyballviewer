@@ -7,7 +7,8 @@ app.controller('DetailCtrl', ['$scope', '$route', 'PDFViewerService', function (
 	$scope.root = 'active';
 	$scope.id = $route.current.params.id;
 
-	$scope.pdfURL = "assets/pdfviewer/test.pdf";
+    // $scope.pdfURL = "assets/pdfviewer/test.pdf";
+	$scope.pdfURL = "https://s3-eu-west-1.amazonaws.com/volleyballpdf/pdf/Magnes+volleyballkr_nike++1978-1979+-+bind+1_OCR.pdf";
     $scope.instance = pdf.Instance("viewer");
 
     $scope.nextPage = function() {

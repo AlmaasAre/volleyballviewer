@@ -1,22 +1,24 @@
 <div style="background: #f4f4f4;">
-	<!-- <iframe 
-		src="http://docs.google.com/viewer?url=http://www.url.com/{{id}}.jpg" 
-		width="600" height="780" 
-		style="border: none;">
-	</iframe> -->
 
-	<!-- <div class="navbar navbar-inverse navbar-fixed-top"> -->
 	<div class="navbar navbar-inverse">
 		<div class="container">
-			<div class="btn-group">
-	            <button class="btn" ng-click="pdfURL='test.pdf'">Load test.pdf</button>
-	            <button class="btn" ng-click="pdfURL='test2.pdf'">Load test2.pdf</button>
-	        </div>
+			<!-- <div class="btn-group">
+	            <button class="btn btn-sm btn-default" ng-click="pdfURL='test.pdf'">Load test.pdf</button>
+	            <button class="btn btn-sm btn-default" ng-click="pdfURL='test2.pdf'">Load test2.pdf</button>
+	        </div> -->
 	        <div class="btn-group">
-	            <button class="btn" ng-click="gotoPage(1)">|&lt;</button>
-	            <button class="btn" ng-click="prevPage()">&lt;</button>
-	            <button class="btn" ng-click="nextPage()">&gt;</button>
-	            <button class="btn" ng-click="gotoPage(totalPages)">&gt;|</button>
+	            <button class="btn btn-sm btn-default" ng-click="gotoPage(1)">
+	            	<span class="glyphicon glyphicon-circle-arrow-left"></span>
+	            </button>
+	            <button class="btn btn-sm btn-default" ng-click="prevPage()">
+	            	<span class="glyphicon glyphicon-chevron-left"></span>
+	            </button>
+	            <button class="btn btn-sm btn-default" ng-click="nextPage()">
+	            	<span class="glyphicon glyphicon-chevron-right"></span>
+	            </button>
+	            <button class="btn btn-sm btn-default" ng-click="gotoPage(totalPages)">
+	            	<span class="glyphicon glyphicon-circle-arrow-right"></span>
+	            </button>
 	        </div>
 	        <span class="label" ng-show="totalPages">{{currentPage}}/{{totalPages}}</span>
 		</div>

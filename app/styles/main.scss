@@ -89,13 +89,21 @@ header.hero h1 {
 /* --------------------------------
     Navigation
 -------------------------------- */
-.navbar.custom {
+.navbar {
+    border-radius: 0px;
+
+    .btn-group {
+        margin-top: 9px;
+    }
+}
+
+.navbar.navbar-custom {
    margin-bottom: -55px;
    background: #000;
 }
 
 @media (min-width: 992px) { 
-    .navbar.custom {
+    .navbar.navbar-custom {
         border-radius: 0px;
         background: none;
         border: none;
@@ -161,6 +169,10 @@ header.hero {
             color: rgba(255, 255, 255, 0.7);
         }
     }
+}
+
+canvas {
+    width: 100%;
 }
 
 

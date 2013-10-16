@@ -39,24 +39,26 @@ angular.module('studentportalenApp').run(['$templateCache', function($templateCa
 
   $templateCache.put('views/detail.html',
     "<div style=\"background: #f4f4f4\">\n" +
-    "\t<!-- <iframe \n" +
-    "\t\tsrc=\"http://docs.google.com/viewer?url=http://www.url.com/{{id}}.jpg\" \n" +
-    "\t\twidth=\"600\" height=\"780\" \n" +
-    "\t\tstyle=\"border: none;\">\n" +
-    "\t</iframe> -->\n" +
     "\n" +
-    "\t<!-- <div class=\"navbar navbar-inverse navbar-fixed-top\"> -->\n" +
     "\t<div class=\"navbar navbar-inverse\">\n" +
     "\t\t<div class=\"container\">\n" +
-    "\t\t\t<div class=\"btn-group\">\n" +
-    "\t            <button class=\"btn\" ng-click=\"pdfURL='test.pdf'\">Load test.pdf</button>\n" +
-    "\t            <button class=\"btn\" ng-click=\"pdfURL='test2.pdf'\">Load test2.pdf</button>\n" +
-    "\t        </div>\n" +
+    "\t\t\t<!-- <div class=\"btn-group\">\n" +
+    "\t            <button class=\"btn btn-sm btn-default\" ng-click=\"pdfURL='test.pdf'\">Load test.pdf</button>\n" +
+    "\t            <button class=\"btn btn-sm btn-default\" ng-click=\"pdfURL='test2.pdf'\">Load test2.pdf</button>\n" +
+    "\t        </div> -->\n" +
     "\t        <div class=\"btn-group\">\n" +
-    "\t            <button class=\"btn\" ng-click=\"gotoPage(1)\">|&lt;</button>\n" +
-    "\t            <button class=\"btn\" ng-click=\"prevPage()\">&lt;</button>\n" +
-    "\t            <button class=\"btn\" ng-click=\"nextPage()\">&gt;</button>\n" +
-    "\t            <button class=\"btn\" ng-click=\"gotoPage(totalPages)\">&gt;|</button>\n" +
+    "\t            <button class=\"btn btn-sm btn-default\" ng-click=\"gotoPage(1)\">\n" +
+    "\t            \t<span class=\"glyphicon glyphicon-circle-arrow-left\"></span>\n" +
+    "\t            </button>\n" +
+    "\t            <button class=\"btn btn-sm btn-default\" ng-click=\"prevPage()\">\n" +
+    "\t            \t<span class=\"glyphicon glyphicon-chevron-left\"></span>\n" +
+    "\t            </button>\n" +
+    "\t            <button class=\"btn btn-sm btn-default\" ng-click=\"nextPage()\">\n" +
+    "\t            \t<span class=\"glyphicon glyphicon-chevron-right\"></span>\n" +
+    "\t            </button>\n" +
+    "\t            <button class=\"btn btn-sm btn-default\" ng-click=\"gotoPage(totalPages)\">\n" +
+    "\t            \t<span class=\"glyphicon glyphicon-circle-arrow-right\"></span>\n" +
+    "\t            </button>\n" +
     "\t        </div>\n" +
     "\t        <span class=\"label\" ng-show=\"totalPages\">{{currentPage}}/{{totalPages}}</span>\n" +
     "\t\t</div>\n" +
