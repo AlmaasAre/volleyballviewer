@@ -1,14 +1,55 @@
-<div class="container">
+<div>
 
-	<div class="page-header">
-		<h1>Bootstrap grid examples</h1>
-		<p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
-	</div>
+	<div class="content-wrapper">
+		
+		<div ng-include src='"/views/partials/nav.html"'></div>
 
-	<div class="row">
-		<div class="col-md-4">.col-md-4</div>
-		<div class="col-md-4">.col-md-4</div>
-		<div class="col-md-4">.col-md-4</div>
+		<header class="hero">
+			<div class="container">
+				<h1><small>Magne Hornes</small><br/>Volleyball krønike</h1>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="input-group">
+							<input type="search" class="form-control" placeholder="Søk etter navn, overskrifter eller innholdstekst .." ng-model="search">
+							<span class="input-group-btn">
+						        <button class="btn btn-primary" type="button">Søk</button>
+					      	</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container content">
+
+			<div class="row">
+				<div class="col-md-12">
+					<hr/>
+					<p>
+						<strong>Resultat: </strong>
+						{{(articles | filter:search).length}} elementer i listen
+						<small ng-show="search"> - ("{{search}}")</small>
+					</p>
+					<hr/>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-3 col-sm-6" ng-repeat="article in articles | filter:search">
+					<!-- <a href="/#/detail/{{article.id}}" target="_blank"> -->
+					<a href="/#/artikkel/{{article.id}}" style="text-decoration: none;">
+						<div class="element">
+							<h3>{{article.year}}<br/>
+								<small ng-show="search">x treff</small>
+							</h3>
+							<img ng-src="{{article.image_url}}" style="width: 100%; height: 300px;" alt="">
+						</div>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
 	</div>
 
 </div>
