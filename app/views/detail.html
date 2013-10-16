@@ -1,35 +1,34 @@
-<div>
+<div style="background: #f4f4f4;">
 	<!-- <iframe 
 		src="http://docs.google.com/viewer?url=http://www.url.com/{{id}}.jpg" 
 		width="600" height="780" 
 		style="border: none;">
 	</iframe> -->
 
-	<div class="content-wrapper">
-
-		<div ng-include src='"/views/partials/nav.html"'></div>
-
-		<header class="hero">
-			<div class="container">
-				<h1><small>Magne Hornes</small><br/>Volleyball krønike</h1>
-			</div>
-		</header>
-		
-		<div class="container content">
-
-			<div class="row">
-				<div class="col-md-12">
-					<!-- <hr/>
-					<a href="/" class="btn btn-sm btn-default">Tilbake til oversikten</a>
-					<small style="margin-left: 10px;">eller gjør et nytt søk ovenfor</small> -->
-					<h2>{{id}}</h2>
-					<hr/>
-					<img src="http://www.url.com/{{id}}.jpg" alt="">
-				</div>
-			</div>
-
+	<!-- <div class="navbar navbar-inverse navbar-fixed-top"> -->
+	<div class="navbar navbar-inverse">
+		<div class="container">
+			<div class="btn-group">
+	            <button class="btn" ng-click="pdfURL='test.pdf'">Load test.pdf</button>
+	            <button class="btn" ng-click="pdfURL='test2.pdf'">Load test2.pdf</button>
+	        </div>
+	        <div class="btn-group">
+	            <button class="btn" ng-click="gotoPage(1)">|&lt;</button>
+	            <button class="btn" ng-click="prevPage()">&lt;</button>
+	            <button class="btn" ng-click="nextPage()">&gt;</button>
+	            <button class="btn" ng-click="gotoPage(totalPages)">&gt;|</button>
+	        </div>
+	        <span class="label" ng-show="totalPages">{{currentPage}}/{{totalPages}}</span>
 		</div>
+	</div>
 
+	<div class="container">
+		<pdfviewer 
+			src="{{pdfURL}}" 
+			on-page-load='pageLoaded(page,total)' 
+			id="viewer" 
+			load-progress='loadProgress(loaded, total, state)'>
+		</pdfviewer>
 	</div>
 
 </div>

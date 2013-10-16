@@ -31,43 +31,40 @@ angular.module('studentportalenApp').run(['$templateCache', function($templateCa
     "\n" +
     "\t</div>\n" +
     "\n" +
+    "\t<div ng-include=\"\" src=\"\\\"views/partials/footer.html\\\"\"></div>\n" +
+    "\n" +
     "</div>"
   );
 
 
   $templateCache.put('views/detail.html',
-    "<div>\n" +
+    "<div style=\"background: #f4f4f4\">\n" +
     "\t<!-- <iframe \n" +
     "\t\tsrc=\"http://docs.google.com/viewer?url=http://www.url.com/{{id}}.jpg\" \n" +
     "\t\twidth=\"600\" height=\"780\" \n" +
     "\t\tstyle=\"border: none;\">\n" +
     "\t</iframe> -->\n" +
     "\n" +
-    "\t<div class=\"content-wrapper\">\n" +
-    "\n" +
-    "\t\t<div ng-include=\"\" src=\"\\\"/views/partials/nav.html\\\"\"></div>\n" +
-    "\n" +
-    "\t\t<header class=\"hero\">\n" +
-    "\t\t\t<div class=\"container\">\n" +
-    "\t\t\t\t<h1><small>Magne Hornes</small><br>Volleyball krønike</h1>\n" +
-    "\t\t\t</div>\n" +
-    "\t\t</header>\n" +
-    "\t\t\n" +
-    "\t\t<div class=\"container content\">\n" +
-    "\n" +
-    "\t\t\t<div class=\"row\">\n" +
-    "\t\t\t\t<div class=\"col-md-12\">\n" +
-    "\t\t\t\t\t<!-- <hr/>\n" +
-    "\t\t\t\t\t<a href=\"/\" class=\"btn btn-sm btn-default\">Tilbake til oversikten</a>\n" +
-    "\t\t\t\t\t<small style=\"margin-left: 10px;\">eller gjør et nytt søk ovenfor</small> -->\n" +
-    "\t\t\t\t\t<h2>{{id}}</h2>\n" +
-    "\t\t\t\t\t<hr>\n" +
-    "\t\t\t\t\t<img src=\"http://www.url.com/{{id}}.jpg\" alt=\"\">\n" +
-    "\t\t\t\t</div>\n" +
-    "\t\t\t</div>\n" +
-    "\n" +
+    "\t<!-- <div class=\"navbar navbar-inverse navbar-fixed-top\"> -->\n" +
+    "\t<div class=\"navbar navbar-inverse\">\n" +
+    "\t\t<div class=\"container\">\n" +
+    "\t\t\t<div class=\"btn-group\">\n" +
+    "\t            <button class=\"btn\" ng-click=\"pdfURL='test.pdf'\">Load test.pdf</button>\n" +
+    "\t            <button class=\"btn\" ng-click=\"pdfURL='test2.pdf'\">Load test2.pdf</button>\n" +
+    "\t        </div>\n" +
+    "\t        <div class=\"btn-group\">\n" +
+    "\t            <button class=\"btn\" ng-click=\"gotoPage(1)\">|&lt;</button>\n" +
+    "\t            <button class=\"btn\" ng-click=\"prevPage()\">&lt;</button>\n" +
+    "\t            <button class=\"btn\" ng-click=\"nextPage()\">&gt;</button>\n" +
+    "\t            <button class=\"btn\" ng-click=\"gotoPage(totalPages)\">&gt;|</button>\n" +
+    "\t        </div>\n" +
+    "\t        <span class=\"label\" ng-show=\"totalPages\">{{currentPage}}/{{totalPages}}</span>\n" +
     "\t\t</div>\n" +
+    "\t</div>\n" +
     "\n" +
+    "\t<div class=\"container\">\n" +
+    "\t\t<pdfviewer src=\"{{pdfURL}}\" on-page-load=\"pageLoaded(page,total)\" id=\"viewer\" load-progress=\"loadProgress(loaded, total, state)\">\n" +
+    "\t\t</pdfviewer>\n" +
     "\t</div>\n" +
     "\n" +
     "</div>"
@@ -129,6 +126,8 @@ angular.module('studentportalenApp').run(['$templateCache', function($templateCa
     "\n" +
     "\t</div>\n" +
     "\n" +
+    "\t<div ng-include=\"\" src=\"\\\"views/partials/footer.html\\\"\"></div>\n" +
+    "\n" +
     "</div>"
   );
 
@@ -147,7 +146,7 @@ angular.module('studentportalenApp').run(['$templateCache', function($templateCa
 
 
   $templateCache.put('views/partials/nav.html',
-    "<div class=\"navbar navbar-inverse\">\n" +
+    "<div class=\"navbar navbar-inverse navbar-custom\">\n" +
     "\t<div class=\"container\">\n" +
     "\t\t<div class=\"navbar-header\">\n" +
     "\t\t\t<button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n" +
@@ -193,6 +192,8 @@ angular.module('studentportalenApp').run(['$templateCache', function($templateCa
     "\t\t</div>\n" +
     "\n" +
     "\t</div>\n" +
+    "\n" +
+    "\t<div ng-include=\"\" src=\"\\\"views/partials/footer.html\\\"\"></div>\n" +
     "\t\n" +
     "</div>"
   );
