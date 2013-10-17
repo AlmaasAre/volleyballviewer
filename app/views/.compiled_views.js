@@ -89,7 +89,7 @@ angular.module('studentportalenApp').run(['$templateCache', function($templateCa
     "\t\t\t\t<div class=\"col-md-12\" ng-show=\"(articles | filter:search).length < 1\">\n" +
     "\t\t\t\t\t<p>Ditt søk ga dessverre ingen resultater.</p>\n" +
     "\t\t\t\t</div>\n" +
-    "\t\t\t\t<div class=\"col-md-3 col-sm-6 fade-in\" ng-repeat=\"article in articles | filter:search\">\n" +
+    "\t\t\t\t<div class=\"col-md-3 col-sm-6 scale-fade\" ng-repeat=\"article in articles | filter:search\">\n" +
     "\t\t\t\t\t<!-- <a href=\"/#/detail/{{article.id}}\" target=\"_blank\"> -->\n" +
     "\t\t\t\t\t<a href=\"/#/artikkel/{{article.id}}\" style=\"text-decoration: none\">\n" +
     "\t\t\t\t\t\t<div class=\"element\">\n" +
