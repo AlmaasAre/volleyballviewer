@@ -6,6 +6,7 @@
 
 		<header class="hero">
 			<div class="container">
+				<div class="portrait"></div>
 				<h1><small>Magne Hornes</small><br/>Volleyball krønike</h1>
 				<div class="row">
 					<div class="col-md-12">
@@ -35,12 +36,15 @@
 			</div>
 
 			<div class="row">
-				<div class="col-md-3 col-sm-6" ng-repeat="article in articles | filter:search">
+				<div class="col-md-12" ng-show="(articles | filter:search).length < 1">
+					<p>Ditt søk ga dessverre ingen resultater.</p>
+				</div>
+				<div class="col-md-3 col-sm-6 fade-in" ng-repeat="article in articles | filter:search">
 					<!-- <a href="/#/detail/{{article.id}}" target="_blank"> -->
 					<a href="/#/artikkel/{{article.id}}" style="text-decoration: none;">
 						<div class="element">
 							<h3>{{article.year}}<br/>
-								<small ng-show="search">x treff</small>
+								<!-- <small ng-show="search">x treff</small> -->
 							</h3>
 							<img ng-src="{{article.image_url}}" style="width: 100%; height: 300px;" alt="">
 						</div>
