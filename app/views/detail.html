@@ -1,36 +1,5 @@
-<div style="background: #f4f4f4;">
+<div class="pdf-wrapper">
 
-	<div class="navbar navbar-inverse">
-		<div class="container">
-			<!-- <div class="btn-group">
-	            <button class="btn btn-sm btn-default" ng-click="pdfURL='test.pdf'">Load test.pdf</button>
-	            <button class="btn btn-sm btn-default" ng-click="pdfURL='test2.pdf'">Load test2.pdf</button>
-	        </div> -->
-	        <div class="btn-group">
-	            <button class="btn btn-sm btn-default" ng-click="gotoPage(1)">
-	            	<span class="glyphicon glyphicon-circle-arrow-left"></span>
-	            </button>
-	            <button class="btn btn-sm btn-default" ng-click="prevPage()">
-	            	<span class="glyphicon glyphicon-chevron-left"></span>
-	            </button>
-	            <button class="btn btn-sm btn-default" ng-click="nextPage()">
-	            	<span class="glyphicon glyphicon-chevron-right"></span>
-	            </button>
-	            <button class="btn btn-sm btn-default" ng-click="gotoPage(totalPages)">
-	            	<span class="glyphicon glyphicon-circle-arrow-right"></span>
-	            </button>
-	        </div>
-	        <span class="label" ng-show="totalPages">{{currentPage}}/{{totalPages}}</span>
-		</div>
-	</div>
-
-	<div class="container">
-		<pdfviewer 
-			src="{{pdfURL}}" 
-			on-page-load='pageLoaded(page,total)' 
-			id="viewer" 
-			load-progress='loadProgress(loaded, total, state)'>
-		</pdfviewer>
-	</div>
+	VIS PDF {{id}}	
 
 </div>

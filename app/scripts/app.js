@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('volleyballviewerApp', ['ngPDFViewer'])
+angular.module('volleyballviewerApp', ['ngRoute', 'ngPDFViewer', 'ngAnimate'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

@@ -9,6 +9,7 @@ angular.module('studentportalenApp').run(['$templateCache', function($templateCa
     "\n" +
     "\t\t<header class=\"hero\">\n" +
     "\t\t\t<div class=\"container\">\n" +
+    "\t\t\t\t<div class=\"portrait\"></div>\n" +
     "\t\t\t\t<h1><small>Magne Hornes</small><br>Volleyball krønike</h1>\n" +
     "\t\t\t</div>\n" +
     "\t\t</header>\n" +
@@ -38,36 +39,9 @@ angular.module('studentportalenApp').run(['$templateCache', function($templateCa
 
 
   $templateCache.put('views/detail.html',
-    "<div style=\"background: #f4f4f4\">\n" +
+    "<div class=\"pdf-wrapper\">\n" +
     "\n" +
-    "\t<div class=\"navbar navbar-inverse\">\n" +
-    "\t\t<div class=\"container\">\n" +
-    "\t\t\t<!-- <div class=\"btn-group\">\n" +
-    "\t            <button class=\"btn btn-sm btn-default\" ng-click=\"pdfURL='test.pdf'\">Load test.pdf</button>\n" +
-    "\t            <button class=\"btn btn-sm btn-default\" ng-click=\"pdfURL='test2.pdf'\">Load test2.pdf</button>\n" +
-    "\t        </div> -->\n" +
-    "\t        <div class=\"btn-group\">\n" +
-    "\t            <button class=\"btn btn-sm btn-default\" ng-click=\"gotoPage(1)\">\n" +
-    "\t            \t<span class=\"glyphicon glyphicon-circle-arrow-left\"></span>\n" +
-    "\t            </button>\n" +
-    "\t            <button class=\"btn btn-sm btn-default\" ng-click=\"prevPage()\">\n" +
-    "\t            \t<span class=\"glyphicon glyphicon-chevron-left\"></span>\n" +
-    "\t            </button>\n" +
-    "\t            <button class=\"btn btn-sm btn-default\" ng-click=\"nextPage()\">\n" +
-    "\t            \t<span class=\"glyphicon glyphicon-chevron-right\"></span>\n" +
-    "\t            </button>\n" +
-    "\t            <button class=\"btn btn-sm btn-default\" ng-click=\"gotoPage(totalPages)\">\n" +
-    "\t            \t<span class=\"glyphicon glyphicon-circle-arrow-right\"></span>\n" +
-    "\t            </button>\n" +
-    "\t        </div>\n" +
-    "\t        <span class=\"label\" ng-show=\"totalPages\">{{currentPage}}/{{totalPages}}</span>\n" +
-    "\t\t</div>\n" +
-    "\t</div>\n" +
-    "\n" +
-    "\t<div class=\"container\">\n" +
-    "\t\t<pdfviewer src=\"{{pdfURL}}\" on-page-load=\"pageLoaded(page,total)\" id=\"viewer\" load-progress=\"loadProgress(loaded, total, state)\">\n" +
-    "\t\t</pdfviewer>\n" +
-    "\t</div>\n" +
+    "\tVIS PDF {{id}}\t\n" +
     "\n" +
     "</div>"
   );
@@ -82,6 +56,7 @@ angular.module('studentportalenApp').run(['$templateCache', function($templateCa
     "\n" +
     "\t\t<header class=\"hero\">\n" +
     "\t\t\t<div class=\"container\">\n" +
+    "\t\t\t\t<div class=\"portrait\"></div>\n" +
     "\t\t\t\t<h1><small>Magne Hornes</small><br>Volleyball krønike</h1>\n" +
     "\t\t\t\t<div class=\"row\">\n" +
     "\t\t\t\t\t<div class=\"col-md-12\">\n" +
@@ -111,12 +86,15 @@ angular.module('studentportalenApp').run(['$templateCache', function($templateCa
     "\t\t\t</div>\n" +
     "\n" +
     "\t\t\t<div class=\"row\">\n" +
-    "\t\t\t\t<div class=\"col-md-3 col-sm-6\" ng-repeat=\"article in articles | filter:search\">\n" +
+    "\t\t\t\t<div class=\"col-md-12\" ng-show=\"(articles | filter:search).length < 1\">\n" +
+    "\t\t\t\t\t<p>Ditt søk ga dessverre ingen resultater.</p>\n" +
+    "\t\t\t\t</div>\n" +
+    "\t\t\t\t<div class=\"col-md-3 col-sm-6 scale-fade\" ng-repeat=\"article in articles | filter:search\">\n" +
     "\t\t\t\t\t<!-- <a href=\"/#/detail/{{article.id}}\" target=\"_blank\"> -->\n" +
     "\t\t\t\t\t<a href=\"/#/artikkel/{{article.id}}\" style=\"text-decoration: none\">\n" +
     "\t\t\t\t\t\t<div class=\"element\">\n" +
     "\t\t\t\t\t\t\t<h3>{{article.year}}<br>\n" +
-    "\t\t\t\t\t\t\t\t<small ng-show=\"search\">x treff</small>\n" +
+    "\t\t\t\t\t\t\t\t<!-- <small ng-show=\"search\">x treff</small> -->\n" +
     "\t\t\t\t\t\t\t</h3>\n" +
     "\t\t\t\t\t\t\t<img ng-src=\"{{article.image_url}}\" style=\"width: 100%; height: 300px\" alt=\"\">\n" +
     "\t\t\t\t\t\t</div>\n" +
@@ -138,8 +116,13 @@ angular.module('studentportalenApp').run(['$templateCache', function($templateCa
     "<footer class=\"page-footer\">\n" +
     "  \t<div class=\"container\">\n" +
     "    \t<div class=\"row\">\n" +
-    "        \t<div class=\"col-md-12\">\n" +
-    "          \t\t<p>Footer</p>\n" +
+    "        \t<div class=\"col-md-6\">\n" +
+    "        \t\t<h5>Tittel</h5>\n" +
+    "          \t\t<p>Lorem ipsum</p>\n" +
+    "        \t</div>\n" +
+    "        \t<div class=\"col-md-6\">\n" +
+    "        \t\t<h5>Tittel</h5>\n" +
+    "        \t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, sit, quas, eos non obcaecati expedita incidunt magnam minima soluta nam corporis repellendus deleniti dolor fuga facere maxime dolorum iusto odit!</p>\n" +
     "        \t</div>\n" +
     "    \t</div>\n" +
     "  \t</div>\n" +
@@ -161,7 +144,7 @@ angular.module('studentportalenApp').run(['$templateCache', function($templateCa
     "\t\t<div class=\"collapse navbar-collapse\">\n" +
     "\t\t\t<ul class=\"nav navbar-nav\">\n" +
     "\t\t\t\t<li ng-class=\"root\"><a href=\"/\">Søk i arkivet</a></li>\n" +
-    "\t\t\t\t<li ng-class=\"timeline\"><a href=\"/#/tidslinje\">Tidslinje</a></li>\n" +
+    "\t\t\t\t<!-- <li ng-class=\"timeline\"><a href=\"/#/tidslinje\">Tidslinje</a></li> -->\n" +
     "\t\t\t\t<li ng-class=\"about\"><a href=\"/#/om\">Om</a></li>\n" +
     "\t\t\t</ul>\n" +
     "\t\t</div>\n" +
@@ -179,6 +162,7 @@ angular.module('studentportalenApp').run(['$templateCache', function($templateCa
     "\n" +
     "\t\t<header class=\"hero\">\n" +
     "\t\t\t<div class=\"container\">\n" +
+    "\t\t\t\t<div class=\"portrait\"></div>\n" +
     "\t\t\t\t<h1><small>Magne Hornes</small><br>Volleyball krønike</h1>\n" +
     "\t\t\t</div>\n" +
     "\t\t</header>\n" +

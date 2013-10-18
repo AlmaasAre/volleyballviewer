@@ -11,6 +11,7 @@
     Header
     Content
     Footer
+    Animations
 
 ----- */
 
@@ -72,7 +73,7 @@ a {
 
 .content {
     padding-bottom: 30px;
-    min-height: 400px;
+    min-height: 350px;
 }
 
 
@@ -83,6 +84,12 @@ header.hero h1 {
     position: absolute;
     bottom: 50px;
     color: #fff;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+
+    small {
+        color: rgba(255, 255, 255, 0.7);
+        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+    }
 }
 
 
@@ -119,7 +126,7 @@ header.hero h1 {
     Header
 -------------------------------- */
 header.hero {
-    background: #777 url('/images/hero-background.jpg') no-repeat center; 
+    background: #777 url('/images/hero-background2.jpg') no-repeat center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -128,9 +135,27 @@ header.hero {
     margin-bottom: 30px;
     position: relative;
 
+    .container {
+        position: relative;
+        height: 300px;
+
+        .portrait {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            right: 100px;
+            top: 0px;
+            background: red;
+        }
+    }
+
+    input[type="search"] {
+        padding-left: 35px;
+        background: #fff url('/images/search-icon.png') no-repeat 12px 9px;
+    }
+
     input[type="search"], .input-group-btn button {
         margin-top: $hero-height - 17;
-        // padding-left: 35px;
     }
 
     .input-group-btn button {
@@ -175,6 +200,17 @@ canvas {
     width: 100%;
 }
 
+.pdf-wrapper {
+    background: #f4f4f4;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
 
 /* --------------------------------
     Footer
@@ -184,11 +220,86 @@ footer.page-footer {
     padding-bottom: 30px;
 
     p {
-        color: #eee;
+        color: #ddd;
+        font-size: 11px;
+    }
+
+    h5 {
+        color: #fff;
     }
 }
 
 
+/* --------------------------------
+    Animations
+-------------------------------- */
+.fade-in.ng-enter {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    opacity: 0;
+}
 
+.fade-in.ng-leave {
+    -webkit-transition: 0.2s linear all;
+    -moz-transition: 0.2s linear all;
+    -o-transition: 0.2s linear all;
+    transition: 0.2s linear all;
+    opacity: 1;
+}
+
+.fade-in.ng-leave.ng-leave-active {
+    -webkit-transition: 0.2s linear all;
+    -moz-transition: 0.2s linear all;
+    -o-transition: 0.2s linear all;
+    transition: 0.2s linear all;
+    opacity: 0;
+}
+ 
+.fade-in.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+.scale-fade {
+  -webkit-transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scale-fade.ng-enter {
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  opacity: 0;
+}
+
+.scale-fade.ng-enter-active {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  opacity: 1;
+}
+
+.scale-fade.ng-leave {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  opacity: 1;
+}
+
+.scale-fade.ng-leave-active {
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  opacity: 0;
+}
 
 
