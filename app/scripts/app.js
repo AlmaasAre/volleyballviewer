@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('volleyballviewerApp', ['ngRoute', 'ngPDFViewer', 'ngAnimate'])
+angular.module('volleyballviewerApp', ['ngRoute', 'ngAnimate'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/artikkel/:id', {
+      .when('/artikkel/:url', {
         templateUrl: 'views/detail.html',
         controller: 'DetailCtrl'
       })

@@ -13,6 +13,19 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+
+    <!--PDF Viewer-->
+    <link rel="stylesheet" href="assets/pdfjs/viewer.css"/>
+    <link rel="resource" type="application/l10n" href="assets/pdfjs/locale/locale.properties"/>
+
+    <script type="text/javascript" src="assets/pdfjs/compatibility.js"></script>
+    <script type="text/javascript" src="assets/pdfjs/l10n.js"></script>
+    <script type="text/javascript" src="assets/pdfjs/pdf.js"></script>
+    <script type="text/javascript" src="assets/pdfjs/debugger.js"></script>
+
+
+
 </head>
     <body ng-app="volleyballviewerApp">
         
@@ -41,7 +54,7 @@
 
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/angular/angular-animate.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
         <!-- <script src="http://code.angularjs.org/angular-1.2.0-8336b3a/angular-animate.js"></script> -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 
@@ -65,17 +78,14 @@
         <script src="bower_components/sass-bootstrap/js/popover.js"></script>
         <script src="bower_components/sass-bootstrap/js/transition.js"></script>
 
-        <script src="assets/pdfviewer/compatibility.js"></script>
-        <script src="assets/pdfviewer/pdf.js"></script>
-        <script src="assets/pdfviewer/ng-pdfviewer.js"></script>
-        <script src="assets/pdfviewer/pdf.compat.js"></script>
-
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/detail.js"></script>
         <script src="scripts/controllers/timeline.js"></script>
         <script src="scripts/controllers/about.js"></script>
+
+        <script src="scripts/directives/pdfViewer.js"></script>
         <!-- endbuild -->
     
     </body>
