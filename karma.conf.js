@@ -13,22 +13,13 @@ module.exports = function(config) {
     files: [
       'app/bower_components/jquery/jquery.js',
       'app/bower_components/angular/angular.js',
-      'app/bower_components/underscore/underscore.js',
-      'app/bower_components/momentjs/moment.js',
-      'app/bower_components/momentjs/lang/nb.js',
-      'app/scripts/libs/jquery.nextTo.js',
       'app/bower_components/angular-animate/angular-animate.js',
       'app/bower_components/angular-route/angular-route.js',
       'app/scripts/app.js',
-      'test/mock/firebase.js',
-      'test/mock/firebase-simple-login.js',
-      'app/scripts/services/firebase-simple-login.js',
-      'app/scripts/libs/angularfire.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/views/.compiled_views.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
-      'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
 

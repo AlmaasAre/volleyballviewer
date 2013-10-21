@@ -1,7 +1,9 @@
 'use strict';
 
-angular.module('volleyballviewerApp', ['ngRoute', 'ngAnimate'])
-  .config(function ($routeProvider) {
+var app = angular.module('volleyballviewerApp', ['ngRoute', 'ngAnimate']);
+
+
+app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -23,3 +25,9 @@ angular.module('volleyballviewerApp', ['ngRoute', 'ngAnimate'])
         redirectTo: '/'
       });
   });
+
+
+app.constant('Config', {
+   APIUrl:'sjekk mannen'
+
+});

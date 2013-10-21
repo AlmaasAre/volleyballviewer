@@ -1,4 +1,4 @@
-angular.module('studentportalenApp').run(['$templateCache', function($templateCache) {
+angular.module('volleyballviewerApp').run(['$templateCache', function($templateCache) {
 
   $templateCache.put('views/about.html',
     "<div>\n" +

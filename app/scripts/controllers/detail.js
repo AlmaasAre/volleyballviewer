@@ -2,8 +2,8 @@
 
 var app = angular.module('volleyballviewerApp');
 
-app.controller('DetailCtrl', ['$scope', '$route', function ($scope, $route, pdf) {
-    
+app.controller('DetailCtrl', ['$scope', '$route', function ($scope, $route) {
+
 	$scope.root = 'active';
 
     $scope.pdfUrl ='';

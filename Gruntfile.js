@@ -31,7 +31,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     yeoman: yeomanConfig,
     ngtemplates:  {
-        studentportalenApp: {
+        volleyballviewerApp: {
           options: { 
             base: '<%= yeoman.app %>'
           },
@@ -67,13 +67,13 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/scripts/**/*.js',
           '<%= yeoman.app %>/images/**/*.{png,jpg,jpeg,gif}'
         ],
-        tasks: ['ngtemplates:studentportalenApp']
+        tasks: ['ngtemplates:volleyballviewerApp']
       },
       compileViews: {
         files: [
           '<%= yeoman.app %>/**/*.html',
         ],
-        tasks: ['ngtemplates:studentportalenApp']
+        tasks: ['ngtemplates:volleyballviewerApp']
       }
     },
     autoprefixer: {
@@ -382,7 +382,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     // 'clean:server',
-    'ngtemplates:studentportalenApp',
+    'ngtemplates:volleyballviewerApp',
     // 'concurrent:test',
     'autoprefixer',
     // 'connect:test',
