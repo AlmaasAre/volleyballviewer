@@ -45,9 +45,9 @@ angular.module('volleyballviewerApp').run(['$templateCache', function($templateC
     "</pdf-viewer>\n" +
     "-->\n" +
     "\n" +
-    "<pdf-viewer pdf-url=\"https://s3-eu-west-1.amazonaws.com/volleyballpdf/pdf/Magnes+volleyballkr_nike++1991-1992+-+bind+11-12_OCR.pdf\">\n" +
+    "<!--<pdf-viewer pdf-url=''>\n" +
     "\n" +
-    "</pdf-viewer>"
+    "</pdf-viewer>-->"
   );
 
 
@@ -393,7 +393,7 @@ angular.module('volleyballviewerApp').run(['$templateCache', function($templateC
     "\t\t\t\t</div>\n" +
     "\t\t\t\t<div class=\"col-md-3 col-sm-6 scale-fade\" ng-repeat=\"article in articles | filter:search\">\n" +
     "\t\t\t\t\t<!-- <a href=\"/#/detail/{{article.id}}\" target=\"_blank\"> -->\n" +
-    "\t\t\t\t\t<a href=\"/#/artikkel/{{article.id}}\" style=\"text-decoration: none\">\n" +
+    "\t\t\t\t\t<a href=\"/#/artikkel/{{article._id}}\" style=\"text-decoration: none\">\n" +
     "\t\t\t\t\t\t<div class=\"element\">\n" +
     "\t\t\t\t\t\t\t<h3>{{article.year}}<br>\n" +
     "\t\t\t\t\t\t\t\t<!-- <small ng-show=\"search\">x treff</small> -->\n" +
