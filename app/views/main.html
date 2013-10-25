@@ -52,7 +52,7 @@
 				<div class="col-md-12" ng-show="(articles | filter:search).length < 1">
 					<p>Ditt søk ga dessverre ingen resultater.</p>
 				</div>
-				<div class="col-md-3 col-sm-6 scale-fade" ng-repeat="article in articles | filter:search | orderBy:orderElements">
+				<div class="col-md-3 col-sm-6 scale-fade" ng-repeat="article in articles | filter:{'year':search} | orderBy:orderElements">
 					<!-- <a href="/#/detail/{{article.id}}" target="_blank"> -->
 					<a href="/#/artikkel/{{article._id}}" style="text-decoration: none;">
 						<div class="element">
