@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba937a9d-3124-449f-843c-87300cde4f6d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/element-background.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/.compiled_views.js" afterPath="$PROJECT_DIR$/app/views/.compiled_views.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.html" afterPath="$PROJECT_DIR$/app/views/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.scss" afterPath="$PROJECT_DIR$/app/styles/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/pdfjs/viewer.css" afterPath="$PROJECT_DIR$/app/assets/pdfjs/viewer.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="volleyballviewer.iws" />
@@ -50,10 +45,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="viewer.css" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="viewer.css" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/pdfjs/viewer.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="284" column="2" selection-start="5466" selection-end="5466" vertical-scroll-proportion="0.33277592" vertical-offset="4061" max-vertical-offset="25245">
+                <state line="284" column="2" selection-start="5466" selection-end="5466" vertical-scroll-proportion="7.123746" vertical-offset="0" max-vertical-offset="25245">
                   <folding />
                 </state>
               </provider>
@@ -99,10 +94,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="data-service.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="data-service.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/scripts/services/data-service.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="21" column="0" selection-start="470" selection-end="470" vertical-scroll-proportion="0.5155483" vertical-offset="0" max-vertical-offset="660">
+                <state line="15" column="0" selection-start="371" selection-end="381" vertical-scroll-proportion="0.36824876" vertical-offset="0" max-vertical-offset="660">
                   <folding />
                 </state>
               </provider>
@@ -478,13 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/services/data-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="470" selection-end="470" vertical-scroll-proportion="0.5155483" vertical-offset="0" max-vertical-offset="660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="387" column="22" selection-start="9350" selection-end="9350" vertical-scroll-proportion="0.0" vertical-offset="5521" max-vertical-offset="6390">
@@ -494,7 +482,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/pdfjs/viewer.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="2" selection-start="5466" selection-end="5466" vertical-scroll-proportion="0.33277592" vertical-offset="4061" max-vertical-offset="25245">
+        <state line="284" column="2" selection-start="5466" selection-end="5466" vertical-scroll-proportion="7.123746" vertical-offset="0" max-vertical-offset="25245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/services/data-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="371" selection-end="381" vertical-scroll-proportion="0.36824876" vertical-offset="0" max-vertical-offset="660">
           <folding />
         </state>
       </provider>
