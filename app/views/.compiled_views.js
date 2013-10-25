@@ -357,7 +357,7 @@ angular.module('volleyballviewerApp').run(['$templateCache', function($templateC
     "\t\t\t\t<div class=\"row\">\n" +
     "\t\t\t\t\t<div class=\"col-md-12\">\n" +
     "\t\t\t\t\t\t<div class=\"input-group\">\n" +
-    "\t\t\t\t\t\t\t<input type=\"search\" class=\"form-control\" placeholder=\"Søk etter navn, overskrifter eller innholdstekst ..\" ng-model=\"search\">\n" +
+    "\t\t\t\t\t\t\t<input type=\"search\" class=\"form-control\" placeholder=\"Søk etter navn, årstall, overskrifter eller innholdstekst ..\" ng-model=\"search\">\n" +
     "\t\t\t\t\t\t\t<span class=\"input-group-btn\">\n" +
     "\t\t\t\t\t\t        <button class=\"btn btn-primary\" type=\"button\">Søk</button>\n" +
     "\t\t\t\t\t      \t</span>\n" +
@@ -376,6 +376,19 @@ angular.module('volleyballviewerApp').run(['$templateCache', function($templateC
     "\t\t\t\t\t\t<strong>Resultat: </strong>\n" +
     "\t\t\t\t\t\t{{(articles | filter:search).length}} elementer i listen\n" +
     "\t\t\t\t\t\t<small ng-show=\"search\"> - (\"{{search}}\")</small>\n" +
+    "\n" +
+    "\t\t\t\t\t\t<span class=\"ordering-wrapper\">\n" +
+    "\t\t\t\t\t\t\t<span>\n" +
+    "\t\t\t\t\t\t\t\t<a ng-click=\"setElementOrdering('-year')\">\n" +
+    "\t\t\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-chevron-down\"></span>\n" +
+    "\t\t\t\t\t\t\t\t</a>\n" +
+    "\t\t\t\t\t\t\t</span>\n" +
+    "\t\t\t\t\t\t\t<span>\n" +
+    "\t\t\t\t\t\t\t\t<a ng-click=\"setElementOrdering('year')\">\n" +
+    "\t\t\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-chevron-up\"></span>\n" +
+    "\t\t\t\t\t\t\t\t</a>\n" +
+    "\t\t\t\t\t\t\t</span>\n" +
+    "\t\t\t\t\t\t</span>\n" +
     "\t\t\t\t\t</p>\n" +
     "\t\t\t\t\t<hr>\n" +
     "\t\t\t\t</div>\n" +
@@ -385,7 +398,7 @@ angular.module('volleyballviewerApp').run(['$templateCache', function($templateC
     "\t\t\t\t<div class=\"col-md-12\" ng-show=\"(articles | filter:search).length < 1\">\n" +
     "\t\t\t\t\t<p>Ditt søk ga dessverre ingen resultater.</p>\n" +
     "\t\t\t\t</div>\n" +
-    "\t\t\t\t<div class=\"col-md-3 col-sm-6 scale-fade\" ng-repeat=\"article in articles | filter:search\">\n" +
+    "\t\t\t\t<div class=\"col-md-3 col-sm-6 scale-fade\" ng-repeat=\"article in articles | filter:search | orderBy:orderElements\">\n" +
     "\t\t\t\t\t<!-- <a href=\"/#/detail/{{article.id}}\" target=\"_blank\"> -->\n" +
     "\t\t\t\t\t<a href=\"/#/artikkel/{{article._id}}\" style=\"text-decoration: none\">\n" +
     "\t\t\t\t\t\t<div class=\"element\">\n" +

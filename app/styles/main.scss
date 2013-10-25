@@ -76,6 +76,20 @@ a {
     min-height: 350px;
 }
 
+.ordering-wrapper {
+    float: right;
+
+    a {
+        color: #222;
+        margin-left: 10px;
+        opacity: 0.4;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
 
 /* --------------------------------
     Typography

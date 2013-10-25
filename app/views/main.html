@@ -11,7 +11,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="input-group">
-							<input type="search" class="form-control" placeholder="Søk etter navn, overskrifter eller innholdstekst .." ng-model="search">
+							<input type="search" class="form-control" placeholder="Søk etter navn, årstall, overskrifter eller innholdstekst .." ng-model="search">
 							<span class="input-group-btn">
 						        <button class="btn btn-primary" type="button">Søk</button>
 					      	</span>
@@ -30,6 +30,19 @@
 						<strong>Resultat: </strong>
 						{{(articles | filter:search).length}} elementer i listen
 						<small ng-show="search"> - ("{{search}}")</small>
+
+						<span class="ordering-wrapper">
+							<span>
+								<a ng-click="setElementOrdering('-year')">
+									<span class="glyphicon glyphicon-chevron-down"></span>
+								</a>
+							</span>
+							<span>
+								<a ng-click="setElementOrdering('year')">
+									<span class="glyphicon glyphicon-chevron-up"></span>
+								</a>
+							</span>
+						</span>
 					</p>
 					<hr/>
 				</div>
@@ -39,7 +52,7 @@
 				<div class="col-md-12" ng-show="(articles | filter:search).length < 1">
 					<p>Ditt søk ga dessverre ingen resultater.</p>
 				</div>
-				<div class="col-md-3 col-sm-6 scale-fade" ng-repeat="article in articles | filter:search">
+				<div class="col-md-3 col-sm-6 scale-fade" ng-repeat="article in articles | filter:search | orderBy:orderElements">
 					<!-- <a href="/#/detail/{{article.id}}" target="_blank"> -->
 					<a href="/#/artikkel/{{article._id}}" style="text-decoration: none;">
 						<div class="element">
