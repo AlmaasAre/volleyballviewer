@@ -357,7 +357,7 @@ angular.module('volleyballviewerApp').run(['$templateCache', function($templateC
     "\t\t\t\t<div class=\"row\">\n" +
     "\t\t\t\t\t<div class=\"col-md-12\">\n" +
     "\t\t\t\t\t\t<div class=\"input-group\">\n" +
-    "\t\t\t\t\t\t\t<input type=\"search\" class=\"form-control\" placeholder=\"Søk etter navn, årstall, overskrifter eller innholdstekst ..\" ng-model=\"search\">\n" +
+    "\t\t\t\t\t\t\t<input type=\"search\" class=\"form-control\" placeholder=\"Søk etter årstall ..\" ng-model=\"search\">\n" +
     "\t\t\t\t\t\t\t<span class=\"input-group-btn\">\n" +
     "\t\t\t\t\t\t        <button class=\"btn btn-primary\" type=\"button\">Søk</button>\n" +
     "\t\t\t\t\t      \t</span>\n" +
@@ -405,7 +405,8 @@ angular.module('volleyballviewerApp').run(['$templateCache', function($templateC
     "\t\t\t\t\t\t\t<h3>{{article.year}}<br>\n" +
     "\t\t\t\t\t\t\t\t<!-- <small ng-show=\"search\">x treff</small> -->\n" +
     "\t\t\t\t\t\t\t</h3>\n" +
-    "\t\t\t\t\t\t\t<img ng-src=\"{{article.image_url}}\" style=\"width: 100%; height: 300px\" alt=\"\">\n" +
+    "\t\t\t\t\t\t\t<!-- <img ng-src=\"{{article.image_url}}\" style=\"width: 100%; height: 300px;\" alt=\"\"> -->\n" +
+    "\t\t\t\t\t\t\t<img ng-src=\"/images/element-background.jpg\" style=\"width: 100%; height: 300px\" alt=\"\">\n" +
     "\t\t\t\t\t\t</div>\n" +
     "\t\t\t\t\t</a>\n" +
     "\t\t\t\t</div>\n" +
