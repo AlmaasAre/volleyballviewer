@@ -6,7 +6,6 @@ app.controller('MainCtrl', function ($scope, init) {
 
 	$scope.root = 'active';
 
-    console.log(init);
 	$scope.articles = init;
 
 })
@@ -14,9 +13,8 @@ app.controller('MainCtrl', function ($scope, init) {
 
     var _prepare = function () {
 
-        var deferred = $q.defer();
-        deferred.resolve(dataService.pdf.getAll());
-        return deferred.promise;
+        return dataService.pdf.getAll();
+
     }
 
     return {

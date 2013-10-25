@@ -39,15 +39,9 @@ angular.module('volleyballviewerApp').run(['$templateCache', function($templateC
 
 
   $templateCache.put('views/detail.html',
-    "<!--\n" +
-    "<pdf-viewer pdf-url='https://s3-eu-west-1.amazonaws.com/volleyballpdf/pdf/Magnes+volleyballkr_nike++1978-1979+-+bind+1_OCR.pdf'>\n" +
+    "<pdf-viewer pdf-url=\"{{pdf.linkUrl}}\">\n" +
     "\n" +
-    "</pdf-viewer>\n" +
-    "-->\n" +
-    "\n" +
-    "<!--<pdf-viewer pdf-url=''>\n" +
-    "\n" +
-    "</pdf-viewer>-->"
+    "</pdf-viewer>"
   );
 
 

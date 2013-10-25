@@ -2,23 +2,19 @@
 
 var app = angular.module('volleyballviewerApp');
 
-app.controller('DetailCtrl', ['$scope', '$route', function ($scope, $route, init) {
+app.controller('DetailCtrl', function ($scope, init) {
 
 	$scope.root = 'active';
+    $scope.pdf = init;
 
-    setTimeout(function () {
-        console.log(init);
-    },2000);
-
-}])
+})
 .service('DetailCtrlInit', function ($route, dataService, $q) {
 
     var _prepare = function () {
-        console.log('getting pdf with id:' + $route.current.params.id);
+        var id = $route.current.params.id;
+        console.log('getting pdf with id: ' + id);
 
-        var deferred = $q.defer();
-        deferred.resolve(dataService.pdf.getById($route.current.params.id));
-        return deferred.promise;
+        return dataService.pdf.getById(id);
     }
 
     return {

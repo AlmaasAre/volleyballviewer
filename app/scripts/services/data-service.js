@@ -6,12 +6,10 @@ angular.module('volleyballviewerApp')
         var _getByIdWrapper = function(url){
 
             var _getById = function (id) {
-                var deferred = $q.defer();
 
-                var entity = Restangular.one(url, id).get();
-                deferred.resolve(entity);
+                //Returns a promise of the requested entity
+                return Restangular.one(url, id).get();
 
-                return deferred.promise;
             };
 
             return _getById;
@@ -21,12 +19,9 @@ angular.module('volleyballviewerApp')
         var _getAllWrapper = function (url) {
 
             var _getAll = function () {
-                var deferred = $q.defer();
 
-                var entities = Restangular.all(url).getList();
-
-                deferred.resolve(entities);
-                return deferred.promise;
+                //Returns a promise of the requested entities
+                return Restangular.all(url).getList();
             };
 
             return _getAll;
