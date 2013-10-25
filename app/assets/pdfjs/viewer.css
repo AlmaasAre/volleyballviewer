@@ -36,10 +36,10 @@ select {
 }
 
 .hidden {
-  display: none !important;
+  display: none;
 }
 [hidden] {
-  display: none !important;
+  display: none;
 }
 
 #viewerContainer:-webkit-full-screen {
@@ -65,11 +65,11 @@ select {
 }
 
 #viewerContainer:-ms-fullscreen {
-  top: 0px !important;
+  top: 0px;
   border-top: 2px solid transparent;
   width: 100%;
   height: 100%;
-  overflow: hidden !important;
+  overflow: hidden;
   cursor: none;
 }
 
@@ -98,7 +98,7 @@ select {
 }
 
 :-ms-fullscreen .page {
-  margin-bottom: 100% !important;
+  margin-bottom: 100%;
 }
 
 :fullscreen .page {
@@ -114,7 +114,7 @@ select {
 }
 
 :-ms-fullscreen a:not(.internalLink) {
-  display: none !important;
+  display: none;
 }
 
 :fullscreen a:not(.internalLink) {
@@ -475,12 +475,14 @@ html[dir='rtl'] #toolbarViewerRight {
   position: absolute;
   top: 0;
   left: 0;
+  width: 300px; /* HACK */
 }
 html[dir='ltr'] #toolbarViewerRight,
 html[dir='rtl'] #toolbarViewerLeft {
   position: absolute;
   top: 0;
   right: 0;
+  width: 300px; /* HACK */
 }
 html[dir='ltr'] #toolbarViewerLeft > *,
 html[dir='ltr'] #toolbarViewerMiddle > *,
@@ -488,6 +490,9 @@ html[dir='ltr'] #toolbarViewerRight > *,
 html[dir='ltr'] .findbar > * {
   position: relative !important;
   float: left !important;
+}
+html[dir='ltr'] #toolbarViewerRight > * {
+  float: right; /* HACK */
 }
 html[dir='rtl'] #toolbarViewerLeft > *,
 html[dir='rtl'] #toolbarViewerMiddle > *,
@@ -747,7 +752,7 @@ html[dir='rtl'] .dropdownToolbarButton {
 }
 
 .promptButton {
-  margin: 3px 2px 4px 5px !important;
+  margin: 3px 2px 4px 5px;
   line-height: 16px;
   padding: 2px 6px 3px 6px;
 }
